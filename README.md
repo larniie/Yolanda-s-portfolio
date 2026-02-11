@@ -37,7 +37,8 @@ The project showcases a clean dark UI with a purple accent and demonstrates real
 portfolio/
 │
 ├── frontend/
-│   ├── index.html
+|   ├── Front Page.html
+│   ├── Portfolio.html
 │   ├── style.css
 │   └── app.js
 │
