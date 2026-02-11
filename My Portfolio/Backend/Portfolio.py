@@ -36,6 +36,12 @@ projects = [
         "description": "Modern portfolio with 3D effects, AI features, and dynamic content loading",
         "link": "https://github.com/larniie",
         "technologies": ["HTML", "CSS", "JavaScript", "Python", "Flask"]
+    }, 
+     {
+        "title": "Decentralized Experience Verification System",
+        "description": "DEVS is a decentralized system for verifying experiences using blockchain technology. It provides a secure and transparent way to store and verify professional or personal experiences.",
+        "link": "https://github.com/larniie/Decentralized-experience-verification-system",
+        "technologies": ["Flask", "Python", "HTML", "JavaScript", "Blockchain"]
     }
 ]
 
@@ -104,3 +110,4 @@ def internal_error(error):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
