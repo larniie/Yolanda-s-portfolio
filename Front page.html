@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yolanda | GlowAI Portfolio</title>
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #140020, #000);
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  cursor: none; /* optional: hides default cursor for premium feel */
+}
+
+/* Purple glow background follower */
+.cursor-glow {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(155, 0, 255, 0.4), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(70px);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+/* Layout */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Permanent Glow Welcome */
+#welcome-text {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  color: #c084fc;
+  text-align: center;
+  text-shadow:
+    0 0 10px #7f00ff,
+    0 0 20px #7f00ff,
+    0 0 40px #a855f7,
+    0 0 80px #a855f7;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 10px #7f00ff,
+      0 0 20px #7f00ff,
+      0 0 40px #a855f7;
+  }
+  50% {
+    text-shadow:
+      0 0 20px #a855f7,
+      0 0 40px #c084fc,
+      0 0 80px #c084fc;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #7f00ff,
+      0 0 20px #7f00ff,
+      0 0 40px #a855f7;
+  }
+}
+
+/* Button */
+#work-btn {
+  margin-top: 50px;
+  padding: 15px 45px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease, transform 0.3s ease;
+}
+
+#work-btn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px #a855f7,
+    0 0 40px #a855f7;
+}
+  </style>
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+   <div class="ai-glow"></div>
+
+  <div class="container">
+    <h1 id="welcome-text">WELCOME TO MY PORTFOLIO</h1>
+
+<a href="Portfolio.html">
+    <button id="work-btn">View My Work</button>
+</a>
+  </div>
+
+  <script>
+    const glow = document.querySelector(".cursor-glow");
+const button = document.getElementById("work-btn");
+
+document.addEventListener("mousemove", (e) => {
+  glow.style.left = e.clientX + "px";
+  glow.style.top = e.clientY + "px";
+});
+
+// Show button after 10 seconds
+setTimeout(() => {
+  button.style.opacity = "1";
+  button.style.pointerEvents = "auto";
+}, 10000);
+  </script>
+</body>
+</html>
